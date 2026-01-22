@@ -2,8 +2,132 @@
 
 {% block title %}About{% endblock %}
 
+{% block extra_css %}
+<style>
+    .about-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 3px solid #667eea;
+    }
+
+    .about-header h2 {
+        font-size: 2.5rem;
+        color: #667eea;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+    .about-header p {
+        color: #666;
+        font-size: 1.1rem;
+    }
+
+    .info-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        margin: 2rem 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .info-item::before {
+        content: '✓';
+        background: rgba(255, 255, 255, 0.3);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    .info-label {
+        font-weight: 600;
+        margin-right: 1rem;
+        min-width: 120px;
+    }
+
+    .info-value {
+        font-weight: 400;
+        opacity: 0.95;
+    }
+
+    .welcome-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .welcome-section p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.8;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        .about-header h2 {
+            font-size: 2rem;
+        }
+
+        .info-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .info-item {
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 1rem;
+        }
+
+        .info-item::before {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-label {
+            min-width: auto;
+            margin-bottom: 0.5rem;
+        }
+    }
+</style>
+{% endblock %}
+
 {% block content %}
-    <h2>About Me</h2>
-    <p>Name: Patricia Monic Tuazon</p>
-    <p>Student ID: 2023-06145</p>
+    <div class="about-header">
+        <h2>About Me</h2>
+        <p>Get to know more about me</p>
+    </div>
+
+    <div class="welcome-section">
+        <p>Welcome to my Django project! I'm a student passionate about web development and creating beautiful, functional applications.</p>
+    </div>
+
+    <div class="info-card">
+        <div class="info-item">
+            <span class="info-label">Name:</span>
+            <span class="info-value">Patricia Monic Tuazon</span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">Student ID:</span>
+            <span class="info-value">2023-06145</span>
+        </div>
+    </div>
 {% endblock %}
