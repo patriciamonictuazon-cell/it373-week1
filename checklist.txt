@@ -87,6 +87,6 @@
 ## STEP 13: GITHUB REPOSITORY CONNECTION
 - [x] Created GitHub repository: **Django-Playground**
 - [x] Added remote origin:  
-  `git remote add origin https://github.com/ramisys/Django-Playground.git`
+  `git remote add origin https://github.com/patriciamonictuazon-cell/it373-week1.git`
 - [x] Pushed to GitHub: `git push origin master`
 - [x] Repository successfully synced with GitHub
